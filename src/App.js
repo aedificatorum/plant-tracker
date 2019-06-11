@@ -1,24 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import tw from 'tailwind.macro';
+import styled from '@emotion/styled'
+
+const Header = styled.header`
+${tw`bg-red-300 min-h-screen flex flex-col items-center justify-center text-xl text-white`};
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header>
+        PLANT TRACKER
+      </Header>
+      <main>
+        This is the beginning
+      </main>
     </div>
   );
 }
