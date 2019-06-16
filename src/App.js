@@ -5,7 +5,7 @@ import styled from '@emotion/styled'
 import { Switch, Route } from "react-router-dom";
 import Navbar from './Navbar';
 import { getPlants } from './Components/PlantStore'
-import PlantId from './Components/PlantId'
+import Plant from './Components/Plant'
 
 const Header = styled.header`
 ${tw`bg-red-300 min-h-screen flex flex-col items-center justify-center text-xl text-white`};
@@ -25,9 +25,9 @@ function App() {
       </Header>
       <main>
         <Switch>
-          <Route exact path="/" component={PlantId} />
+          <Route exact path="/" component={Plant} />
+          <Route path="/plant/:plantId" component={Plant} />
           </Switch>
-        <PlantId />
       </main>
     </React.Fragment>
   );
