@@ -4,6 +4,7 @@ import tw from 'tailwind.macro';
 import styled from '@emotion/styled'
 import Navbar from './Navbar';
 import { getPlants } from './Components/PlantStore'
+import PlantId from './Components/PlantId'
 
 const Header = styled.header`
 ${tw`bg-red-300 min-h-screen flex flex-col items-center justify-center text-xl text-white`};
@@ -23,6 +24,7 @@ function App() {
       </Header>
       <main>
         {allPlants}
+        <PlantId />
       </main>
     </div>
   );
