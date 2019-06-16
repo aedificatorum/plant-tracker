@@ -1,33 +1,27 @@
-import React from 'react';
-import './App.css';
-import tw from 'tailwind.macro';
-import styled from '@emotion/styled'
+import React from "react";
+import "./App.css";
+import tw from "tailwind.macro";
+import styled from "@emotion/styled";
 import { Switch, Route } from "react-router-dom";
-import Navbar from './Navbar';
-import { getPlants } from './Components/PlantStore'
-import Plant from './Components/Plant'
+import Navbar from "./Navbar";
+import Plant from "./Components/Plant";
+import PlantList from './Components/PlantList'
 
-const Header = styled.header`
-${tw`bg-red-300 min-h-screen flex flex-col items-center justify-center text-xl text-white`};
+const AllPlants = styled.div`
+  ${tw`bg-red-300 min-h-screen flex flex-col items-center justify-center text-xl text-white`};
 `;
 
 function App() {
-  const allPlants = getPlants().map(plant => {
-    return (
-      <div key={plant.name}>{plant.name}</div>
-    )
-  })
+  
 
   return (
     <React.Fragment>
       <Navbar />
-      <Header>
-      </Header>
       <main>
         <Switch>
-          <Route exact path="/" component={Plant} />
-          <Route path="/plant/:plantId" component={Plant} />
-          </Switch>
+          <Route exact path="/" component={PlantList} />
+          <Route path="/plant/:id" component={Plant} />
+        </Switch>
       </main>
     </React.Fragment>
   );
