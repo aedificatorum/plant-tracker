@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import tw from 'tailwind.macro';
 import styled from '@emotion/styled'
+import { Switch, Route } from "react-router-dom";
 import Navbar from './Navbar';
 import { getPlants } from './Components/PlantStore'
 import PlantId from './Components/PlantId'
@@ -18,15 +19,17 @@ function App() {
   })
 
   return (
-    <div>
+    <React.Fragment>
       <Navbar />
       <Header>
       </Header>
       <main>
-        {allPlants}
+        <Switch>
+          <Route exact path="/" component={PlantId} />
+          </Switch>
         <PlantId />
       </main>
-    </div>
+    </React.Fragment>
   );
 }
 
