@@ -18,7 +18,6 @@ const App = () => {
     <React.Fragment>
       <Navbar />
       <main>
-        <NavLink to='stupid'>Poop</NavLink>
         <Switch>
           <Route exact path="/" component={PlantList} />
           <Route path="/plant/:id" component={Plant} />

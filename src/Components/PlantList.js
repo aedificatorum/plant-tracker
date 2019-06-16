@@ -1,12 +1,12 @@
 import React from "react";
 import { getPlants } from "./PlantStore";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const PlantList = () => {
   const allPlants = getPlants().map(plant => {
     return (
       <div key={plant.name}>
-        {/* <NavLink to={`plant/${plant.id}`}>{plant.name}</NavLink> */}
+        <Link to={`plant/${plant.id}`}>{plant.name}</Link>
       </div>
     );
   });

@@ -1,14 +1,18 @@
-import React from 'react';
+import React from "react";
+import { getPlants } from "./PlantStore";
+import { withRouter } from "react-router";
 
-import { Link } from "react-router-dom";
+const Plant = props => {
+  const plant = getPlants().find(p => {
+    return p.id === props.match.params.id;
+  });
 
-const Plant = () => {
   return (
     <div>
-      I am a plant
-      <Link to="I am a link">LOL</Link>
-      </div>
-  )
-}
+      <p>{plant.name}</p>
+      {plant.id}
+    </div>
+  );
+};
 
-export default Plant;
+export default withRouter(Plant);
