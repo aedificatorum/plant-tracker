@@ -1,8 +1,16 @@
 const getPlants = () => {
-    return [{
+  return [
+    {
       id: "superid",
       name: "Stampy"
-    }];
-  };
+    }
+  ];
+};
 
-export { getPlants };
+const getPlant = id => {
+  return getPlants().find(p => {
+    return p.id === id;
+  });
+};
+
+export { getPlants, getPlant };
