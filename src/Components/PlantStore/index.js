@@ -1,5 +1,6 @@
 const getPlants = () => {
     return [{
+      id: "superid",
       name: "Stampy"
     }];
   };
