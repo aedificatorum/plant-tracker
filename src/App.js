@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 import tw from "tailwind.macro";
 import styled from "@emotion/styled";
 import { Switch, Route, NavLink } from "react-router-dom";
