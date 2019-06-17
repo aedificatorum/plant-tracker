@@ -2,7 +2,8 @@ const getPlants = () => {
   return [
     {
       id: "superid",
-      name: "Stampy",
+      name: 'Sansevieria trifasciata',
+      nickname: "Stampy",
       purchased: "May 2019",
       light: "indirect",
       water: "whenever you think about it",
