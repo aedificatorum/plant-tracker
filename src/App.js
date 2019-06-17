@@ -1,6 +1,4 @@
 import React from "react";
-import tw from "tailwind.macro";
-import styled from "@emotion/styled";
 import { Switch, Route } from "react-router-dom";
 import Navbar from "./Navbar";
 import Plant from "./Components/Plant";
