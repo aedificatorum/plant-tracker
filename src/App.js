@@ -1,21 +1,12 @@
 import React from "react";
-import "./App.css";
-import tw from "tailwind.macro";
-import styled from "@emotion/styled";
-import { Switch, Route, NavLink } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import Navbar from "./Navbar";
 import Plant from "./Components/Plant";
 import PlantList from './Components/PlantList'
 
-const AllPlants = styled.div`
-  ${tw`bg-red-300 min-h-screen flex flex-col items-center justify-center text-xl text-white`};
-`;
-
 const App = () => {
-  
-
   return (
-    <React.Fragment>
+    <>
       <Navbar />
       <main>
         <Switch>
@@ -23,7 +14,7 @@ const App = () => {
           <Route path="/plant/:id" component={Plant} />
         </Switch>
       </main>
-    </React.Fragment>
+    </>
   );
 }
 
