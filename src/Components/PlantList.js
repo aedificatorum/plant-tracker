@@ -11,9 +11,12 @@ const PlantList = () => {
     );
   });
 
-  return <div>Plant List {allPlants} 
-    {/* <NavLink to='/fuck'>lol</NavLink> */}
-    </div>;
+  return (
+    <div>
+      Plant List
+      {allPlants}
+    </div>
+  );
 };
 
 export default PlantList;

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { getPlant } from "./PlantStore";
-import { withRouter } from "react-router";
 
 const Plant = props => {
   const [plant, setPlant] = useState(null);
@@ -12,10 +11,10 @@ const Plant = props => {
   return (
     <div>
       {plant ? (
-        <React.Fragment>
+        <>
           <p>{plant.name}</p>
           {plant.id}
-        </React.Fragment>
+        </>
       ) : (
         <div>You are out of green</div>
       )}
@@ -23,4 +22,4 @@ const Plant = props => {
   );
 };
 
-export default withRouter(Plant);
+export default Plant;
