@@ -9,19 +9,19 @@ const Plant = props => {
   }, [props.match.params.id]);
 
   return (
-    <div>
+    <React.Fragment>
       {plant ? (
-        <>
+        <div>
           <p>{plant.name}</p>
           <p>{plant.id}</p>
           <p>{plant.purchased}</p>
           <p>{plant.light}</p>
           <p>{plant.water}</p>
-        </React.Fragment>
+        </div>
       ) : (
         <div>You are out of green</div>
       )}
-    </div>
+    </React.Fragment>
   );
 };
 
