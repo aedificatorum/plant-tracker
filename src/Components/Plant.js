@@ -13,8 +13,11 @@ const Plant = props => {
       {plant ? (
         <>
           <p>{plant.name}</p>
-          {plant.id}
-        </>
+          <p>{plant.id}</p>
+          <p>{plant.purchased}</p>
+          <p>{plant.light}</p>
+          <p>{plant.water}</p>
+        </React.Fragment>
       ) : (
         <div>You are out of green</div>
       )}
