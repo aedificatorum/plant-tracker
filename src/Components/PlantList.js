@@ -28,8 +28,12 @@ const PlantList = () => {
     );
   });
 
-  return <div>Plant List {allPlants}
-  </div>;
+  return (
+    <div>
+      Plant List
+      {allPlants}
+    </div>
+  );
 };
 
 export default PlantList;
