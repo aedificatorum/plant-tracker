@@ -11,7 +11,7 @@ const PlantList = () => {
     return (
       <div key={plant.name}>
         <Link to={`plant/${plant.id}`}>
-          <div css={tw`md:flex p-12 w-8`}>
+          <div css={tw`md:flex p-12`}>
             <div css={tw`md:flex-shrink-0`}>
               <img css={tw`rounded-lg md:w-56`} src="https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_snake-plant-slaurentii_terracotta_4_1024x1024.jpg?v=1537308389" alt="Snake plant" />
             </div>
@@ -21,8 +21,6 @@ const PlantList = () => {
               <p css={tw`mt-2 text-gray-600`}>{plant.name}</p>
             </div>
           </div>
-
-
         </Link>
       </div>
     );
@@ -30,8 +28,10 @@ const PlantList = () => {
 
   return (
     <div>
-      Plant List
-      {allPlants}
+      <h1>Plant List</h1>
+      <div>
+        {allPlants}
+      </div>
     </div>
   );
 };
