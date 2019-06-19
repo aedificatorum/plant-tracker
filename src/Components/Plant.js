@@ -16,6 +16,7 @@ const Plant = props => {
     <React.Fragment>
       {plant ? (
         <div>
+          <img src={plant.img}></img>
           <p>{plant.name}</p>
           <p>{plant.id}</p>
           <p>{plant.purchased}</p>
