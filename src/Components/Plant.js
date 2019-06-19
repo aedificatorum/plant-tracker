@@ -15,13 +15,17 @@ const Plant = props => {
   return (
     <React.Fragment>
       {plant ? (
-        <div>
-          <img src={plant.img}></img>
-          <p>{plant.name}</p>
-          <p>{plant.id}</p>
-          <p>{plant.purchased}</p>
-          <p>{plant.light}</p>
-          <p>{plant.water}</p>
+        <div css={tw`flex`}>
+          <div css={tw`w-1/2 m-12`}>
+            <img src={plant.img}></img>
+          </div>
+          <div css={tw`w-1/2 m-12`}>
+            <h1 css={tw`text-4xl text-green-400 font-bold`}>{plant.nickname}</h1>
+            <p>{plant.name}</p>
+            <p>{plant.purchased}</p>
+            <p>{plant.light}</p>
+            <p>{plant.water}</p>
+          </div>
         </div>
       ) : (
         <div>You are out of green</div>
