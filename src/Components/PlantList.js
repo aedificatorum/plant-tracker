@@ -1,8 +1,6 @@
-import React from "react";
 import { getPlants } from "./PlantStore";
 import { Link } from "react-router-dom";
 import tw from "tailwind.macro";
-import styled from "@emotion/styled";
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 

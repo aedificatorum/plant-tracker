@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getPlant } from "./PlantStore";
 import tw from "tailwind.macro";
-import styled from "@emotion/styled";
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 
@@ -17,7 +16,7 @@ const Plant = props => {
       {plant ? (
         <div css={tw`flex`}>
           <div css={tw`w-1/2 w-3/12 m-12`}>
-            <img src={plant.img}></img>
+            <img src={plant.img} alt={plant.nickname}></img>
           </div>
           <div css={tw`w-1/2 m-12`}>
             <h1 css={tw`text-4xl text-green-400 font-bold`}>{plant.nickname}</h1>
