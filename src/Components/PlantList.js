@@ -28,7 +28,7 @@ const PlantList = () => {
 
   return (
     <div>
-      <h1>Plant List</h1>
+      <div css={tw`pt-6 pl-12 text-3xl`}>My garden</div>
       <div>
         {allPlants}
       </div>
