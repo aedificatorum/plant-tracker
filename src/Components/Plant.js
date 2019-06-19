@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { getPlant } from "./PlantStore";
+import tw from "tailwind.macro";
+import styled from "@emotion/styled";
+/** @jsx jsx */
+import { jsx } from "@emotion/core";
 
 const Plant = props => {
   const [plant, setPlant] = useState(null);
