@@ -7,7 +7,7 @@ const getPlants = () => {
       purchased: "May 2019",
       light: "indirect",
       water: "whenever you think about it",
-      photo: "src img" 
+      img: "https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_snake-plant-slaurentii_terracotta_4_1024x1024.jpg?v=1537308389" 
     }
   ];
 };
