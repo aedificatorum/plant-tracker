@@ -16,7 +16,7 @@ const Plant = props => {
     <React.Fragment>
       {plant ? (
         <div css={tw`flex mb-4`}>
-        <div css={tw`w-1/2`}><img src={plant.img} /></div>
+        <div css={tw`w-1/2 h-50 w-50`}><img src={plant.img} /></div>
         <div css={tw`w-1/2`}>
           <p>{plant.name}</p>
           <p>{plant.id}</p>
