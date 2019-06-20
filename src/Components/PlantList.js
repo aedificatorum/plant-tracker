@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { getPlants } from "./PlantStore";
 import { Link } from "react-router-dom";
 import tw from "tailwind.macro";
@@ -7,6 +7,8 @@ import styled from "@emotion/styled";
 import { jsx } from "@emotion/core";
 
 const PlantList = () => {
+  const [watered, setWatered] = useState(false);
+
   const allPlants = getPlants().map(plant => {
     return (
       <div key={plant.name}>
