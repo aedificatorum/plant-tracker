@@ -9,6 +9,12 @@ import { jsx } from "@emotion/core";
 const PlantList = () => {
   const [watered, setWatered] = useState(false);
 
+  const dailyWater = getPlants().filter(plant => {
+    return plant.water === 'daily'
+  })
+
+
+
   const allPlants = getPlants().map(plant => {
     return (
       <div key={plant.name}>
@@ -21,6 +27,7 @@ const PlantList = () => {
               <div css={tw`uppercase tracking-wide text-sm text-indigo-600 font-bold`}>{plant.nickname}</div>
               <div href="#" css={tw`block mt-1 text-lg leading-tight font-semibold text-gray-900 hover:underline`}>{plant.water}</div>
               <p css={tw`mt-2 text-gray-600`}>{plant.name}</p>
+              <div>{dailyWater ? (<p>Did you water me today?</p>) : ('')}</div>
             </div>
           </div>
         </Link>
