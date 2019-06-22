@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
-import React, { useState } from "react";
->>>>>>> 397866aa469c42315417579ff285fb2c2c819efc
+import { React, useState } from "react";
 import { getPlants } from "./PlantStore";
 import { Link } from "react-router-dom";
 import tw from "tailwind.macro";
