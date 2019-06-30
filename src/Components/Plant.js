@@ -34,7 +34,6 @@ const Plant = props => {
             <p>I was purchased in {plant.purchased}</p>
             <p>I love {plant.light} sunlight</p>
             <p>You need to water me {plant.water}</p>
-            <p>
               <ul>
                 {plantHistory.map((history, i) => {
                   return (
@@ -45,7 +44,6 @@ const Plant = props => {
                   );
                 })}
               </ul>
-            </p>
           </div>
         </div>
       ) : (
