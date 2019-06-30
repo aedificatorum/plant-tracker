@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 import Plant from "./Components/Plant";
 import PlantList from './Components/PlantList'
 
-import { seedTestData } from "./Components/PlantStore";
+import { seedTestData, l } from "./Components/PlantStore";
 seedTestData();
 
 const App = () => {
