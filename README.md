@@ -4,10 +4,6 @@ Keep track of your garden.
 
 ### Details
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Built with Create React App, Emotion, and Tailwind CSS (see [this starter project][Emotionwind Starter]).
 
-CSS provided by [TailwindCSS](https://tailwindcss.com), brought to react with [emotion](https://emotion.sh).
-
-Many thanks to the following articles that got CRA/Tailwind/emotion working in the app:
-- https://blog.nardsparagas.com/cra-and-tailwind/
-- https://wetainment.com/articles/tailwind-css-in-js/
+[Emotionwind Starter]: https://github.com/aedificatorum/cra-tailwind-emotion-starter
