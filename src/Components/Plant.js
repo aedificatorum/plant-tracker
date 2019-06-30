@@ -3,6 +3,7 @@ import { getPlant, getPlantHistory } from "./PlantStore";
 import tw from "tailwind.macro";
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
+var moment = require('moment');
 
 const Plant = props => {
   const [plant, setPlant] = useState(null);
