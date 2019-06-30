@@ -29,7 +29,9 @@ const Plant = props => {
             <p>I was purchased in {plant.purchased}</p>
             <p>I love {plant.light} sunlight</p>
             <p>You need to water me {plant.water}</p>
-            <p>{plantHistory.activityType}</p>
+            <p><ul>{plantHistory.map((history, i) => {
+                return (<li key={i}>{history.activityDate.toString()}: {history.activityType}</li>)
+              })}</ul></p>
           </div>
         </div>
       ) : (

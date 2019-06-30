@@ -1,8 +1,17 @@
 const plants = [
   {
-    id: "superid",
+    id: "stampy",
     name: 'Sansevieria trifasciata',
     nickname: "Stampy",
+    purchased: "May 2019",
+    light: "indirect",
+    water: "daily",
+    img: "https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_snake-plant-slaurentii_terracotta_4_1024x1024.jpg?v=1537308389" 
+  },
+  {
+    id: "cactus",
+    name: 'Sansevieria trifasciata',
+    nickname: "Cactus",
     purchased: "May 2019",
     light: "indirect",
     water: "daily",
@@ -12,9 +21,14 @@ const plants = [
 
 const activityHistory = [
   {
-    plantId: "superid",
+    plantId: "stampy",
     activityDate: new Date(),
     activityType: "Water"
+  },
+  {
+    plantId: "stampy",
+    activityDate: new Date(),
+    activityType: "Fertilize"
   }
 ];
 
@@ -29,7 +43,7 @@ const getPlant = plantId => {
 };
 
 const getPlantHistory = plantId => {
-  return activityHistory.find(p => {
+  return activityHistory.filter(p => {
     return p.plantId === plantId; 
   });
 };
