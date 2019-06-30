@@ -18,8 +18,8 @@ const PlantList = () => {
 
   const allPlants = getPlants().map(plant => {
     return (
-      <div key={plant.name}>
-        <div css={tw`md:flex p-12`}>
+      <div key={plant.id} css={tw`w-1/3`}>
+        <div css={tw`p-10 flex`}>
           <div css={tw`md:flex-shrink-0`}>
             <img
               css={tw`rounded-lg md:w-56`}
@@ -57,7 +57,7 @@ const PlantList = () => {
   return (
     <div>
       <div css={tw`pt-6 pl-12 text-3xl`}>My garden</div>
-      <div>{allPlants}</div>
+      <div css={tw`flex flex-wrap`}>{allPlants}</div>
     </div>
   );
 };
