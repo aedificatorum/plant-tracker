@@ -16,8 +16,6 @@ const PlantList = () => {
     setWatered(true);
   }
 
-  console.log(getPlants().length);
-
   const allPlants = getPlants().map(plant => {
     return (
       <div key={plant.id} css={tw`w-1/3`}>
