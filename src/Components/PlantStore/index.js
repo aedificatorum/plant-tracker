@@ -1,3 +1,5 @@
+var moment = require('moment');
+
 const plants = [
   {
     id: "stampy",
@@ -22,12 +24,12 @@ const plants = [
 const activityHistory = [
   {
     plantId: "stampy",
-    activityDate: new Date(),
+    activityDate: moment().format('LL'),
     activityType: "Water"
   },
   {
     plantId: "stampy",
-    activityDate: new Date(),
+    activityDate: moment().format('LL'),
     activityType: "Fertilize"
   }
 ];
