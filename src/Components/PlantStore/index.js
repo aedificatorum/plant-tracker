@@ -10,14 +10,28 @@ const plants = [
   }
 ];
 
+const activityHistory = [
+  {
+    plantId: "superid",
+    activityDate: new Date(),
+    activityType: "Water"
+  }
+];
+
 const getPlants = () => {
   return plants;
 };
 
-const getPlant = id => {
+const getPlant = plantId => {
   return getPlants().find(p => {
-    return p.id === id;
+    return p.id === plantId;
   });
 };
 
-export { getPlants, getPlant };
+const getPlantHistory = plantId => {
+  return activityHistory.find(p => {
+    return p.plantId === plantId; 
+  });
+};
+
+export { getPlants, getPlant, getPlantHistory };
