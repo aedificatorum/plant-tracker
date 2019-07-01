@@ -1,5 +1,5 @@
 import { React, useState, useEffect } from "react";
-import { getPlants, getPlantHistory } from "./PlantStore";
+import { getPlants, getPlantHistory, addHistoryWaterPlant } from "./PlantStore";
 import { Link } from "react-router-dom";
 import tw from "tailwind.macro";
 /** @jsx jsx */
@@ -9,9 +9,8 @@ import Moment from 'react-moment'
 const PlantList = () => {
   const handleClick = (e) => {
     e.preventDefault();
-    console.log(e.target.value);
-    getPlantHistory(e.target.value).push({'id': 'yo', 'plantId': e.target.value, 'activityType': 'watered', 'activityDate': new Date()});
-    console.log(getPlantHistory(e.target.value))
+    addHistoryWaterPlant(e.target.value)
+    console.log(addHistoryWaterPlant(e.target.value))
   }
 
   const allPlants = getPlants().map(plant => {
