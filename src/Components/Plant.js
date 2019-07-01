@@ -35,7 +35,7 @@ const Plant = props => {
             <p>I love {plant.light} sunlight</p>
             <p>You need to water me {plant.water}</p>
               <ul>
-                {plantHistory.map((history, i) => {
+                {plantHistory.slice(0, 5).map((history, i) => {
                   return (
                     <li key={i}>
                       <Moment fromNow>{history.activityDate}</Moment>
