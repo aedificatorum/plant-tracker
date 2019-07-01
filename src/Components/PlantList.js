@@ -1,20 +1,12 @@
 import { React, useState } from "react";
-import { getPlants } from "./PlantStore";
+import { getPlants, getPlantHistory } from "./PlantStore";
 import { Link } from "react-router-dom";
 import tw from "tailwind.macro";
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
+import Moment from 'react-moment'
 
 const PlantList = () => {
-  const [watered, setWatered] = useState(false);
-
-  const dailyWater = getPlants().filter(plant => {
-    return plant.water === "daily";
-  });
-
-  const handleWatering = e => {
-    setWatered(true);
-  }
 
   const allPlants = getPlants().map(plant => {
     return (
@@ -42,12 +34,11 @@ const PlantList = () => {
               {plant.water}
             </div>
             <p css={tw`mt-2 text-gray-600`}>{plant.name}</p>
-            <div>{dailyWater ? <p>Did you water me today?</p> : ""}</div>
-            <button
-              css={tw`bg-green-400 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full`} onClick={handleWatering}
-            >
-              Yes
-            </button>
+            <div>Last watered {getPlantHistory(plant.id).map((h, i) => {
+              return (
+                <div key={i}><Moment fromNow>{h.activityDate}</Moment></div>
+                )
+            })}</div>
           </div>
         </div>
       </div>
