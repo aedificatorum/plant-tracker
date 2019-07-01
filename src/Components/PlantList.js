@@ -34,11 +34,9 @@ const PlantList = () => {
               {plant.water}
             </div>
             <p css={tw`mt-2 text-gray-600`}>{plant.name}</p>
-            <div>Last watered {getPlantHistory(plant.id).map((h, i) => {
-              return (
-                <div key={i}><Moment fromNow>{h.activityDate}</Moment></div>
-                )
-            })}</div>
+            <div>{getPlantHistory(plant.id)[0] ? (getPlantHistory(plant.id).map((h, i) => {
+            return (<div key={i}><Moment fromNow>{h.activityDate})</Moment></div>)})
+              ) : ('No info')}</div>
           </div>
         </div>
       </div>
