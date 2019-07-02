@@ -39,9 +39,15 @@ const getPlantHistory = (plantId) => {
   });
 };
 
+const waterPlant = (plantId) => {
+  log("WATER_PLANT", plantId);
+
+  return plantActivity.push({'id': 'yo', 'plantId': plantId, 'activityType': 'watered', 'activityDate': new Date()});
+}
+
 const seedTestData = () => {
   SeedData(plants, plantActivity);
   logging = true;
 }
 
-export { getPlants, getPlant, getPlantHistory, seedTestData };
+export { getPlants, getPlant, getPlantHistory, seedTestData, waterPlant };

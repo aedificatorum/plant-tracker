@@ -1,5 +1,5 @@
-import { React, useState } from "react";
-import { getPlants, getPlantHistory } from "./PlantStore";
+import { React, useState, useEffect } from "react";
+import { getPlants, getPlantHistory, waterPlant } from "./PlantStore";
 import { Link } from "react-router-dom";
 import tw from "tailwind.macro";
 /** @jsx jsx */
@@ -7,8 +7,20 @@ import { jsx } from "@emotion/core";
 import Moment from 'react-moment'
 
 const PlantList = () => {
+  const [allPlants, setAllPlants] = useState([]);
+  
+  useEffect(() => {
+    setAllPlants(getPlants());
+  }, [])
 
-  const allPlants = getPlants().map(plant => {
+  const handleClick = (e) => {
+    e.preventDefault();
+    waterPlant(e.target.value);
+    setAllPlants(getPlants());
+  }
+
+
+  const plantList = allPlants.map(plant => {
     return (
       <div key={plant.id} css={tw`w-1/3`}>
         <div css={tw`p-10 flex`}>
@@ -40,6 +52,7 @@ const PlantList = () => {
                 </div>)
             })
             ) : ('No info')}</div>
+            <button type="submit" value={plant.id} onClick={handleClick}>Watered today</button>
           </div>
         </div>
       </div>
@@ -49,7 +62,7 @@ const PlantList = () => {
   return (
     <div>
       <div css={tw`pt-6 pl-12 text-3xl`}>My garden</div>
-      <div css={tw`flex flex-wrap`}>{allPlants}</div>
+      <div css={tw`flex flex-wrap`}>{plantList}</div>
     </div>
   );
 };
