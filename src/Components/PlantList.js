@@ -7,12 +7,20 @@ import { jsx } from "@emotion/core";
 import Moment from 'react-moment'
 
 const PlantList = () => {
+  const [allPlants, setAllPlants] = useState([]);
+  
+  useEffect(() => {
+    setAllPlants(getPlants());
+  }, [])
+
   const handleClick = (e) => {
     e.preventDefault();
     waterPlant(e.target.value);
+    setAllPlants(getPlants());
   }
 
-  const allPlants = getPlants().map(plant => {
+
+  const plantList = allPlants.map(plant => {
     return (
       <div key={plant.id} css={tw`w-1/3`}>
         <div css={tw`p-10 flex`}>
@@ -54,7 +62,7 @@ const PlantList = () => {
   return (
     <div>
       <div css={tw`pt-6 pl-12 text-3xl`}>My garden</div>
-      <div css={tw`flex flex-wrap`}>{allPlants}</div>
+      <div css={tw`flex flex-wrap`}>{plantList}</div>
     </div>
   );
 };
